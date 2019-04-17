@@ -9,7 +9,7 @@ class ESP32_SPIFFS {
 
   void begin(void);
   void listDir(const char * dirname, uint8_t levels);
-  void readFile(const char * path);
+  void readFile(const char * path, char *buf);
   void writeFile(const char * path, const char * message);
   void appendFile(const char * path, const char * message);
   void renameFile(const char * path1, const char * path2);

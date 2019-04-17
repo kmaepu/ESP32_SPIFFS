@@ -47,7 +47,8 @@ void ESP32_SPIFFS::listDir(const char * dirname, uint8_t levels){
     }
 }
 
-void ESP32_SPIFFS::readFile(const char * path){
+void ESP32_SPIFFS::readFile(const char * path ,char *buf){
+    unsigned int n = 0;
     Serial.printf("Reading file: %s\r\n", path);
 
     File file = fs.open(path);
@@ -55,10 +56,10 @@ void ESP32_SPIFFS::readFile(const char * path){
         Serial.println("- failed to open file for reading");
         return;
     }
-
-    Serial.println("- read from file:");
+    
     while(file.available()){
-        Serial.write(file.read());
+        *(buf+n) = file.read();
+        n++;
     }
 }
 
