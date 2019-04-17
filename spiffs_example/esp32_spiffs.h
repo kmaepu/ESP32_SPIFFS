@@ -4,9 +4,8 @@
 #ifndef ESP32SPIFFS
 #define ESP32SPIFFS
 
-class ESP32_SPIFFS : public FS {
+class ESP32_SPIFFS {
  public:
-    ESP32_SPIFFS(void);
 
   void begin(void);
   void listDir(const char * dirname, uint8_t levels);
@@ -18,6 +17,6 @@ class ESP32_SPIFFS : public FS {
   void testFileIO(const char * path);
 
   private:
-    fs::FS fs;
+    fs::FS &fs = SPIFFS;
 };
 #endif

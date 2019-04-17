@@ -8,10 +8,6 @@
    https://github.com/me-no-dev/arduino-esp32fs-plugin */
 #define FORMAT_SPIFFS_IF_FAILED true
 
-ESP32_SPIFFS :: ESP32_SPIFFS(void){
-  &fs = SPIFFS;
-}
-
 void ESP32_SPIFFS::begin(void){
   if(!SPIFFS.begin(FORMAT_SPIFFS_IF_FAILED)){
       Serial.println("SPIFFS Mount Failed\n");
@@ -39,7 +35,7 @@ void ESP32_SPIFFS::listDir(const char * dirname, uint8_t levels){
             Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
-                listDir(fs, file.name(), levels -1);
+//                spiffs.listDir(fs, file.name(), levels -1);
             }
         } else {
             Serial.print("  FILE: ");
