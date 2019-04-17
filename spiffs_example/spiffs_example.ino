@@ -15,7 +15,7 @@ void setup() {
   spiffs.readFile("/demo.bmp", file_buf);
   int i;
   for(i=0;i<8192;i++){
-    Serial.printf("%x",file_buf);
+    Serial.printf("%x",file_buf[i]);
   }
   
 //  spiffs.renameFile("/hello.txt", "/foo.txt");
