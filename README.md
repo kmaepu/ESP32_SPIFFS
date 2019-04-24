@@ -1,5 +1,6 @@
 # ESP32_SPIFFS
 
+<<<<<<< HEAD
 　espressif(公式）がgithubで提供しているSPIFFSのサンプルコードをライブラリ化しました。
 元のソースコードは[こちら](https://github.com/espressif/arduino-esp32/tree/master/libraries/SPIFFS)です。
 
@@ -25,4 +26,18 @@
 　　指定したファイル（*path）を削除
  ・void __testFileIO__(const char * path);
 　　SPIFFSの動作確認
+=======
+## 環境
+　開発環境：Arduino-IDE（Arduino-ESP32）
+　使用ボード：ESP-32-DevKit
+
+## 関数一覧
+
+## サンプルコード
+サンプルコードは関数全てを順に実行するようになっています。
+実行すると以下のようにシリアルコンソールへログが表示されます。
+
+<img width="208" alt="Serial console output.PNG" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/183282/2fe5ed08-e0f0-bbcc-e5ef-33273e1a35b1.png">
+
+>>>>>>> 354fb55e92e38554b3794ba6351a60f42814beac
 
