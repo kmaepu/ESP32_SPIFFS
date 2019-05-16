@@ -32,3 +32,5 @@
 
 <img width="208" alt="Serial console output.PNG" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/183282/2fe5ed08-e0f0-bbcc-e5ef-33273e1a35b1.png">
 
+## LICENSE  
+Freeです。
